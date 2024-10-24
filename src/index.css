@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==================== Global Rules ==================== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Reviews-container {
+  margin: 0;
+  padding: 0;
+}
+
+.parallax {
+  background-attachment: fixed;
+}
+:root {
+  --hover-color: #c6783e;
+  --text-color: white;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: #1f2937;
+}
+
+* {
+  font-family: "Jost", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  /* font-family: "Playfair Display", serif; */
+}
+
+h1,
+h2 {
+  font-family: "Marcellus", serif;
+  /* color: white; */
+}
+
+.active-menu {
+  color: var(--hover-color);
+}
+
+.active-menu::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: var(--hover-color);
+  position: absolute;
+  top: 65px;
+  left: 0;
+  border-radius: 20%;
+}
+
+.back-rectangle::after {
+  content: "";
+  height: 5%;
+  width: 100%;
+  background-color: #c6783e;
+  position: absolute;
+  top: 600px;
+  left: 20px;
+  z-index: 20;
+}
+.back-rectangle::before {
+  content: "";
+  height: 100%;
+  width: 5%;
+  background-color: #c6783e;
+  position: absolute;
+  top: 30px;
+  right: -30px;
+  z-index: 20;
+}
+
+.gradient {
+  background-color: #c6783e;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+}
+.hover-line {
+  transition: width 0.3s ease;
+}
+
+.card1:hover .hover-line,
+.card2:hover .hover-line,
+.card4:hover .hover-line,
+.card5:hover .hover-line {
+  width: 100%;
+  background-color: var(--hover-color);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card1:hover .overlay,
+.card2:hover .overlay,
+.card4:hover .overlay,
+.card5:hover .overlay {
+  opacity: 1;
+}
+.card .review-section {
+  display: none;
+}
+
+.card:hover .review-section {
+  display: flex;
+  font-size: large;
+}
