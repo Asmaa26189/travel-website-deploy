@@ -214,6 +214,7 @@ const NavBar = () => {
               smooth={true}
               duration={100}
               className="text-white cursor-pointer"
+              offset={-70}
               onClick={closeMenu}
             >
               Contact us
